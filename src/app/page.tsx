@@ -1,101 +1,156 @@
+'use client';
+import App from "next/dist/pages/_app";
 import Image from "next/image";
+import ReactDOM from "react-dom";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  return ( 
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+                  <main>
+                        <section className="relative bg-gray-100 py-20">
+                            <img src="https://placehold.co/1200x600" alt="Living room with a chair and a plant" className="w-full h-full object-cover absolute inset-0" />
+                            <div className="container mx-auto relative z-10">
+                                <div className="bg-yellow-200 p-8 max-w-md">
+                                    <h2 className="text-xl font-bold">New Arrival</h2>
+                                    <h1 className="text-3xl font-bold mt-2">Discover Our New Collection</h1>
+                                    <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                                    <button className="mt-4 bg-yellow-600 text-white px-4 py-2">BUY NOW</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="py-16">
+                            <div className="container mx-auto text-center">
+                                <h2 className="text-2xl font-bold">Browse The Range</h2>
+                                <p className="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-8">
+                                    <div>
+                                        <img src="https://placehold.co/400x300" alt="Dining room setup" className="w-full h-48 object-cover" />
+                                        <h3 className="mt-2">Dining</h3>
+                                    </div>
+                                    <div>
+                                        <img src="https://placehold.co/400x300" alt="Living room setup" className="w-full h-48 object-cover" />
+                                        <h3 className="mt-2">Living</h3>
+                                    </div>
+                                    <div>
+                                        <img src="https://placehold.co/400x300" alt="Bedroom setup" className="w-full h-48 object-cover" />
+                                        <h3 className="mt-2">Bedroom</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="py-16 bg-gray-100">
+                            <div className="container mx-auto text-center">
+                                <h2 className="text-2xl font-bold">Our Products</h2>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Stylish cafe chair" className="w-full h-48 object-cover" />
+                                        <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm">-30%</div>
+                                        <h3 className="mt-2">Syltherine</h3>
+                                        <p className="text-gray-600">Stylish cafe chair</p>
+                                        <p className="text-gray-800 font-bold">Rp 2.500.000</p>
+                                        <p className="text-gray-400 line-through">Rp 3.500.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Stylish cafe chair" className="w-full h-48 object-cover" />
+                                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity">
+                                            <div className="space-y-2 text-center">
+                                                <button className="bg-white text-black px-4 py-2">Add to cart</button>
+                                                <div className="space-x-2">
+                                                    <i className="fas fa-share"></i>
+                                                    <i className="fas fa-exchange-alt"></i>
+                                                    <i className="fas fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 className="mt-2">Leviosa</h3>
+                                        <p className="text-gray-600">Stylish cafe chair</p>
+                                        <p className="text-gray-800 font-bold">Rp 2.500.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Luxury big sofa" className="w-full h-48 object-cover" />
+                                        <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-sm">-50%</div>
+                                        <h3 className="mt-2">Lolito</h3>
+                                        <p className="text-gray-600">Luxury big sofa</p>
+                                        <p className="text-gray-800 font-bold">Rp 7.000.000</p>
+                                        <p className="text-gray-400 line-through">Rp 14.000.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Outdoor bar table and stool" className="w-full h-48 object-cover" />
+                                        <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 text-sm">New</div>
+                                        <h3 className="mt-2">Respira</h3>
+                                        <p className="text-gray-600">Outdoor bar table and stool</p>
+                                        <p className="text-gray-800 font-bold">Rp 500.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Night lamp" className="w-full h-48 object-cover" />
+                                        <h3 className="mt-2">Grifo</h3>
+                                        <p className="text-gray-600">Night lamp</p>
+                                        <p className="text-gray-800 font-bold">Rp 1.500.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Small mug" className="w-full h-48 object-cover" />
+                                        <h3 className="mt-2">Muggo</h3>
+                                        <p className="text-gray-600">Small mug</p>
+                                        <p className="text-gray-800 font-bold">Rp 150.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Cute bed set" className="w-full h-48 object-cover" />
+                                        <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 text-sm">New</div>
+                                        <h3 className="mt-2">Pingky</h3>
+                                        <p className="text-gray-600">Cute bed set</p>
+                                        <p className="text-gray-800 font-bold">Rp 7.000.000</p>
+                                        <p className="text-gray-400 line-through">Rp 14.000.000</p>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/400x300" alt="Minimalist flower pot" className="w-full h-48 object-cover" />
+                                        <h3 className="mt-2">Potty</h3>
+                                        <p className="text-gray-600">Minimalist flower pot</p>
+                                        <p className="text-gray-800 font-bold">Rp 500.000</p>
+                                    </div>
+                                </div>
+                                <button className="mt-8 bg-gray-800 text-white px-4 py-2">Show More</button>
+                            </div>
+                        </section>
+
+                        <section className="py-16">
+                            <div className="container mx-auto text-center">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="bg-yellow-200 p-8">
+                                        <h2 className="text-2xl font-bold">50+ Beautiful rooms inspiration</h2>
+                                        <p className="mt-4">Our designer already made a lot at beautiful prototype of rooms that inspire you</p>
+                                        <button className="mt-4 bg-yellow-600 text-white px-4 py-2">Explore More</button>
+                                    </div>
+                                    <div className="relative">
+                                        <img src="https://placehold.co/600x400" alt="Room inspiration" className="w-full h-full object-cover" />
+                                        <div className="absolute bottom-4 left-4 bg-white p-4">
+                                            <h3 className="text-xl font-bold">Inner Peace</h3>
+                                            <p className="text-gray-600">01 — Bed Room</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="py-16 bg-gray-100">
+                            <div className="container mx-auto text-center">
+                                <h2 className="text-2xl font-bold">Share your setup with <span className="text-yellow-600">#FuniroFurniture</span></h2>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+                                    <img src="https://placehold.co/400x300" alt="User setup 1" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 2" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 3" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 4" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 5" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 6" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 7" className="w-full h-48 object-cover" />
+                                    <img src="https://placehold.co/400x300" alt="User setup 8" className="w-full h-48 object-cover" />
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                  
+            );
+        };
+        // ReactDOM.render(<App />, document.getElementById('root'))
+
